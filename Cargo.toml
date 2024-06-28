@@ -1,0 +1,18 @@
+[workspace.package]
+edition      = "2021"
+authors      = [""]
+homepage     = ""
+# rust-version = "1.78"
+repository   = ""
+
+[profile.release]
+codegen-units = 1
+opt-level = "s"
+debug = false
+strip = true
+lto = true
+
+[workspace]
+members  = ["crates/*"]
+resolver = "2"
+exclude  = [".github", "sample/"]
